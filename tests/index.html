@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Let's pretend this is some sort of a CGI</title>
+    <style>
+      .error {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Let's pretend this is some sort of a CGI.</h1>
+    <form>
+      <fieldset>
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" placeholder="Emma Thomas" />
+      </fieldset>
+      <input type="submit" />
+    </form>
+    <p class="response"></p>
+    <script>
+      function uselessHandler(e) {
+        e.preventDefault();
+        if (document.querySelector('input').value == "Emma Thomas") {
+          document.querySelector('input[type="submit"]').removeEventListener("click", uselessHandler);
+          document.querySelector('p.response').innerHTML = "Form successfully submitted. Thanks, Emma!";
+          document.querySelector('p.response').className += " success";
+          return;
+        }
+        document.querySelector('p.response').innerHTML = "Form error: Widget out of alignment.";
+        document.querySelector('p.response').className += " error";
+      }
+      document.querySelector('input[type="submit"]').addEventListener("click", uselessHandler, false);
+    </script>
+  </body>
+</html>
