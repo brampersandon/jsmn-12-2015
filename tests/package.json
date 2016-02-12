@@ -1,0 +1,19 @@
+{
+  "name": "tests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cucumber": "^0.9.4",
+    "gulp": "^3.9.1",
+    "gulp-cli": "^1.2.1",
+    "gulp-cucumber": "0.0.17",
+    "gulp-webserver": "^0.9.1",
+    "zombie": "^4.2.1"
+  }
+}
